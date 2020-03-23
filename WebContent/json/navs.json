@@ -1,0 +1,26 @@
+[{
+	"title" : "系统动态",
+	"icon" : "icon-computer",
+	"href" : "page/main.html",
+	"spread" : false
+},{
+	"title" : "用户管理",
+	"icon" : "&#xe612;",
+	"href" : "page/userinfo/userinfo_list.html",
+	"spread" : false
+},{
+	"title" : "留言管理",
+	"icon" : "&#xe600;",
+	"href" : "page/msginfo/msg_list.html",
+	"spread" : false
+},{
+	"title" : "失物招领",
+	"icon" : "&#xe607;",
+	"href" : "page/goodinfo/good_list.html",
+	"spread" : false
+},{
+	"title" : "预约管理",
+	"icon" : "&#xe60a;",
+	"href" : "page/bookinfo/book_list.html",
+	"spread" : false
+}]

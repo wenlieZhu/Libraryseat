@@ -1,0 +1,45 @@
+{
+	"ubjson": [
+		{
+			"bdate": "2019-03-14",
+			"bday": {
+				"date": 14,
+				"day": 4,
+				"hours": 23,
+				"minutes": 12,
+				"month": 2,
+				"nanos": 0,
+				"seconds": 13,
+				"time": 1552576333000,
+				"timezoneOffset": -480,
+				"year": 119
+			},
+			"bid": 5073,
+			"bremark": "相对安静",
+			"btid": 6001,
+			"btime": "下午【13:00 ~ 17:00】",
+			"pid": 4002,
+			"sid": 3207,
+			"uid": 1001
+		}
+	],
+	"ssjson": [
+		{
+			"sid": 3393,
+			"sname": "009号座",
+			"snumber": "430009",
+			"spid": 4003,
+			"spower": "false",
+			"sremark": "",
+			"swindow": "false"
+		}
+	],
+	"pjson": [
+		{
+			"pid": 4003,
+			"pname": "第二阅览室",
+			"pnumber": "212",
+			"premark": ""
+		}
+	]
+}

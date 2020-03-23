@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Libraryseat</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>userinfoServlet</servlet-name>
+    <servlet-class>zwl.web.servlet.UserinfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>userinfoServlet</servlet-name>
+    <url-pattern>/userinfoServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>bookServlet</servlet-name>
+    <servlet-class>zwl.web.servlet.BookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>bookServlet</servlet-name>
+    <url-pattern>/bookServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>adminServlet</servlet-name>
+    <servlet-class>zwl.web.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>adminServlet</servlet-name>
+    <url-pattern>/adminServlet</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>zwl.web.filter.EncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>
