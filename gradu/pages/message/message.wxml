@@ -1,0 +1,19 @@
+<!--pages/message/message.wxml-->
+<view class='liuyan'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/woyaoliuyan.png' style='width:300rpx' mode='widthFix'></image>
+
+</view>
+
+<form bindsubmit="sub_msg">
+<i-panel title="请填写留言主题(10个字以内)">
+    <i-input name="mtitle" type="text" mode="wrapped" placeholder="主题" maxlength="20" bind:blur="bianhua" />
+<view class='msg_warn'>{{md_cue}}</view>
+</i-panel>
+<i-panel title="请填写留言内容(100字以内)">
+<i-input type="textarea" name="mdetail" mode="wrapped" placeholder="内容" maxlength="200" />
+
+</i-panel>
+
+<button form-type="submit"><i-button type="success" shape="circle" size="large">发表留言</i-button></button>
+</form>
+<i-toast id="toast" />

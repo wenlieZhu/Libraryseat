@@ -1,0 +1,27 @@
+/* pages/person/person.wxss */
+.cell-panel-demo{
+    display: block;
+    margin-top: 15px;
+}
+.dingbu{
+  background-color: #5cadff;
+}
+.dingbu image{
+  border-radius: 50%;
+}
+.ziti{
+  font-size: 60rpx;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: KaiTi;
+  font-weight: bold;
+  color: #5cadff;
+  margin-top: 10px;
+}
+.img_center{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}

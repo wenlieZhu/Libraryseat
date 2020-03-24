@@ -1,0 +1,49 @@
+<!--pages/register/register.wxml-->
+<view class='reg_title'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/xinyonghuzhuce.png' style='width:400rpx' mode='widthFix'></image>
+</view>
+<form bindsubmit='sub_register'>
+<i-panel title="请填写注册信息">
+    <i-input name="uname" title="姓名" type="text" autofocus bind:blur="uname_null" />
+    <view class='reg_warn'>{{uname_cue}}</view>
+    <i-input type="number" name="unumber" title="学号"maxlength="10" bind:blur="unumber_null" />
+    <view class='reg_warn'>{{unumber_cue}}</view>
+     <i-input type="password" title="密码" bind:blur="fupasswd_null" />
+     <view class='reg_warn'>{{fupasswd_cue}}</view>
+      <i-input type="password" name="upasswd" title="确认密码" bind:blur="upasswd_null" />
+      <view class='reg_warn'>{{upasswd_cue}}</view>
+      <i-panel title="请选择性别">
+    <i-radio-group current="{{current}}" bindchange="handleFruitChange">
+        <i-radio wx:for="{{fruit}}" position="{{position}}" wx:key="{{item.id}}" value="{{item.name}}" >
+        </i-radio>
+    </i-radio-group>
+</i-panel>
+<view class='reg_warn'>{{usex_cue}}</view>
+      <i-input type="number" name="uphone" title="手机号码" bind:blur="uphone_null" />
+</i-panel>
+<view class='reg_warn'>{{uphone_cue}}</view>
+<picker class='picker_c' bindchange="sel_usertype" name="utid" value="{{utname_default}}" range="{{utlist}}" range-key="utname">
+用户类型(点击选择)：<text style='margin-left:16px;'></text>{{utlist[utname_default].utname}}
+      </picker>
+<view class='reg_warn'>{{utype_cue}}</view>
+<view style='height:20px'></view>
+<picker class='picker_c' bindchange="sel_departinfo" name="did" value="{{dname_default}}" range="{{dlist}}" range-key="dname">
+所在单位(点击选择)：<text style='margin-left:16px;'></text>{{dlist[dname_default].dname}}
+      </picker>
+<view class='reg_warn'>{{udepart_cue}}</view>
+<view style='padding:10px'></view>
+<i-panel title="以下信息选填">
+    <i-input title="邮箱"  name="uemail" />
+    <i-input title="备用电话"  name="utphone" />
+    <i-input title="身份证号"  name="ucard" />
+    <i-input title="QQ号"  name="uqq" />
+    <i-input title="微信号"  name="uwechat" />
+    <i-input title="个性签名"  name="uremark" />
+</i-panel>
+
+<button form-type='submit'><i-button type="success" shape="circle" size="large">完成注册</i-button></button>
+</form>
+<i-button bind:click="mov_login" type="primary" shape="circle" size="large">已注册，点击登录</i-button>
+<view style='padding:1px'></view>
+<i-button bind:click="mov_index" type="info" shape="circle" size="large">返回首页</i-button>
+

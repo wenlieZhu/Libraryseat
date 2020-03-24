@@ -1,0 +1,22 @@
+/* pages/find/find.wxss */
+.card-demo image {
+  border-radius: 50%;
+}
+.card-demo{
+  background-color: azure;
+}
+
+.liuyan{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+button::after{border:0
+}
+button{
+  color: white;
+  background: transparent;
+  margin: 0;
+  outline: none;
+}

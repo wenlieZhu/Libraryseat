@@ -1,0 +1,44 @@
+<!--pages/sysset/sysset.wxml-->
+<view class='all_page'>
+<i-panel class="cell-panel-demo">
+    <i-cell title="关于我们" bindtap="mov_about"></i-cell>
+    <i-cell title="联系我们" bindtap="call_open"></i-cell>
+</i-panel>
+
+<i-panel class="cell-panel-demo" bindtap="mov_map">
+    <i-cell title="附近导航" value="{{diname}}" label="{{diaddress}}"></i-cell>
+</i-panel>
+
+<i-panel class="cell-panel-demo" bindtap="mov_miniset">
+    <i-cell title="授权设置"></i-cell>
+</i-panel>
+
+
+<i-panel class="cell-panel-demo">
+    <i-cell title="备案信息" bindtap="mov_beian"></i-cell>
+</i-panel>
+
+<i-panel class="cell-panel-demo" >
+<i-cell title="切换账号" bindtap="qie_confirm"></i-cell>
+    <i-cell title="退出登录" bindtap="exit_login"></i-cell>
+</i-panel>
+
+<i-action-sheet visible="{{ exit_vis }}" actions="{{ exit_act }}" show-cancel bind:cancel="exit_cancel" bind:click="handleClickItem1" />
+
+<i-modal visible="{{ mod_vis }}" bind:ok="mod_clear" bind:cancel="mod_close">
+    <view>你确定要退出当前账号吗？</view>
+</i-modal>
+
+<i-modal visible="{{ qie_vis }}" bind:ok="qie_clear" bind:cancel="qie_close">
+    <view>你确定要切换其它账号吗？</view>
+    <view>将自动退出本账号</view>
+</i-modal>
+
+<i-modal title="联系我们" visible="{{ call_vis }}" bind:ok="mov_call" bind:cancel="call_close">
+    <view>请在发现页面中</view>
+    <view>找到“联系客服”按钮</view>
+    <view>即可咨询我们</view>
+    <view>我们真诚为您服务</view>
+</i-modal>
+
+</view>

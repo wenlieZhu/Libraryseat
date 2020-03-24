@@ -1,0 +1,27 @@
+<!--pages/perset/perset.wxml-->
+<view class='perset_title'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/gerenziliao.png' style='width:400rpx' mode='widthFix'></image>
+</view>
+<form bindsubmit='sub_perset'>
+<i-panel title="修改个人信息">
+    <i-input value="{{ulist.uname}}" name="uname" title="姓名" type="text"  />
+    <i-input value="{{ulist.unumber}}" name="unumber" type="number" title="学号" />
+     <i-input value="{{ulist.upasswd}}" name="upasswd" type="password" title="密码" />
+      <i-input value="{{ulist.uphone}}" name="uphone" type="number" title="手机号码" />
+</i-panel>
+
+<!-- <picker style='font-size:16px;margin-left:16px;background-color:#E6E6FA' bindchange="sel_departinfo" value="{{dname_default}}" range="{{dlist}}" range-key="dname">
+所在单位：{{dlist[dname_default].dname}}
+      </picker> -->
+<i-panel title="以下信息选填">
+    <i-input name="uemail" title="邮箱" value="{{ulist.uemail}}" />
+    <i-input title="备用号码" name="utphone" value="{{ulist.utphone}}" />
+    <i-input title="身份证号" name="ucard" value="{{ulist.ucard}}" />
+    <i-input title="QQ号" name="uqq" value="{{ulist.uqq}}" />
+    <i-input title="微信号" name="uwechat" value="{{ulist.uwechat}}" />
+    <i-input title="个性签名" name="uremark" value="{{ulist.uremark}}" />
+</i-panel>
+
+<button form-type='submit'><i-button type="success" shape="circle" size="large">保存修改</i-button></button>
+</form>
+<i-button bind:click="mov_index" type="info" shape="circle" size="large">返回首页</i-button>

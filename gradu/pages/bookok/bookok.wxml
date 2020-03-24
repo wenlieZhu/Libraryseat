@@ -1,0 +1,45 @@
+<!--pages/bookok/bookok.wxml-->
+<view class="i-steps-demo">
+<i-steps>
+        <i-step status="finish">
+            <view slot="title">
+                  已登录
+            </view>
+            <view slot="content">
+                当前用户状态正常
+            </view>
+        </i-step>
+        <i-step status="finish">
+            <view slot="title">
+                预约中
+            </view>
+            <view slot="content">
+                请填写相关信息
+            </view>
+        </i-step>
+        <i-step status="process">
+            <view slot="title">
+                预约成功
+            </view>
+            <view slot="content">
+                请按时上座与离座
+            </view>
+        </i-step>
+    </i-steps>
+</view>
+
+<i-panel class="cell-panel-demo" title="预约信息如下">
+    <i-cell-group>
+        <i-cell title="预约号" value="{{blist.bid}}"></i-cell>
+        <i-cell title="预约时间" value="{{blist.bdate}}"></i-cell>
+        <i-cell title="预约时段" value="{{blist.btime}}"></i-cell>
+        <i-cell title="场室名" value="{{plist.pname}}"></i-cell>
+        <i-cell title="座位名" value="{{slist.sname}}"></i-cell>
+        <i-cell title="靠窗情况" value="{{theswindow}}"></i-cell>
+        <i-cell title="插座情况" value="{{thespower}}"></i-cell>
+        <i-cell title="其它需求" value="{{blist.bremark}}"></i-cell>
+        
+    </i-cell-group>
+</i-panel>
+
+<i-button bind:click="goindex" type="success" shape="circle">返回首页</i-button>

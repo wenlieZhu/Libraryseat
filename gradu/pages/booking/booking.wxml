@@ -1,0 +1,79 @@
+<!--pages/booking/booking.wxml-->
+<view class="i-steps-demo">
+
+<i-steps>
+        <i-step status="finish">
+            <view slot="title">
+                  已登录
+            </view>
+            <view slot="content">
+                当前用户状态正常
+            </view>
+        </i-step>
+        <i-step status="process">
+            <view slot="title">
+                预约中
+            </view>
+            <view slot="content">
+                请填写相关信息
+            </view>
+        </i-step>
+        <i-step status="">
+            <view slot="title">
+                预约成功
+            </view>
+            <view slot="content">
+                请按时上座与离座
+            </view>
+        </i-step>
+    </i-steps>
+</view>
+ 
+<i-panel title="座位将随机分配，请根据需求进行选择"></i-panel>
+
+<picker class='picker_c'
+    mode="date"
+    value="{{date}}"
+    start="{{nextday}}"
+    end="{{sevenday}}"
+    bindchange="bindDateChange"> 
+请选择日期(点此处选择)<text style='margin-left:16px;'></text>{{bdate}}
+</picker>
+<view class='picker_cc'>注意：预约期限为未来一周</view>
+<view class='book_warn'>{{bdate_cue}}</view>
+<form bindsubmit="formSubmit">
+<i-panel title="请选择预约时段">
+    <i-radio-group current="{{btime}}" bindchange="sel_btime">
+        <i-radio wx:for="{{booktime}}" position="left" wx:key="{{item.id}}" value="{{item.name}}">
+        </i-radio>
+    </i-radio-group>
+</i-panel>
+<view class='book_warn'>{{btime_cue}}</view>
+
+<i-panel title="请选择场室">
+    <i-radio-group current="{{pname}}" bindchange="sel_pid">
+        <i-radio wx:for="{{placename}}" position="left" wx:key="{{item.id}}" value="{{item.name}}">
+        </i-radio>
+    </i-radio-group>
+</i-panel>
+<view class='book_warn'>{{bplace_cue}}</view>
+<i-cell title="需要靠窗">
+        <i-switch value="{{swindow}}" bind:change="sel_window" slot="footer">
+            <i-icon type="right" slot="open"></i-icon>
+            <i-icon type="close" slot="close"></i-icon>
+        </i-switch>
+    </i-cell>
+
+    <i-cell title="需要插座">
+        <i-switch value="{{spower}}" bind:change="sel_power" slot="footer">
+            <i-icon type="right" slot="open"></i-icon>
+            <i-icon type="close" slot="close"></i-icon>
+        </i-switch>
+    </i-cell>
+<i-input name="remark" type="text" title="其它需求" value="无" />
+<i-toast id="toast" />
+<button form-type='submit'><i-button type="primary" size="large">提交预约</i-button></button>
+
+
+</form>
+

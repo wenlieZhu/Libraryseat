@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class='login_title'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/dengluxitong.png' style='width:400rpx' mode='widthFix'></image>
+</view>
+<form bindsubmit="sub_login">
+<i-panel title="请输入登录信息"></i-panel>
+<i-panel>
+    <i-input type="number" name="unumber" mode="wrapped" title="学号" placeholder="请输入学号" maxlength="10" bind:blur="unum_full" autofocus />
+</i-panel>
+<view class='login_warn'>{{unum_cue}}</view>
+<i-panel>
+    <i-input type="password" mode="wrapped" name="upasswd" title="密码" placeholder="请输入密码" bind:blur="upasswd_full" />
+</i-panel>
+    <view class='login_warn'>{{upasswd_cue}}</view>
+
+<button form-type="submit"><i-button type="success" shape="circle" size="large">登录</i-button></button>
+</form>
+
+<i-button bind:click="handleWarning" type="warning" shape="circle" size="large">忘记密码</i-button>
+<i-toast id="toast" />
+<view style='padding:1px'></view>
+<i-button bind:click="mov_register" type="primary" shape="circle" size="large">新用户注册</i-button>
+<view style='padding:1px'></view>
+<i-button bind:click="mov_index" type="info" shape="circle" size="large">返回首页</i-button>
+

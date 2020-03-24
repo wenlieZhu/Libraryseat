@@ -1,0 +1,13 @@
+/* pages/sysset/sysset.wxss */
+.cell-panel-demo{
+    display: block;
+    margin-top: 15px;
+}
+.all_page{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  background-color: rgb(240, 240, 240);
+}

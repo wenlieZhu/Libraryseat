@@ -1,0 +1,21 @@
+/* pages/login/login.wxss */
+button::after{border:0
+}
+button{
+  color: white;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.login_title{
+  align-items: center;
+  display: flex;  
+  justify-content: center;
+  padding: 15px;
+}
+.login_warn{
+  color: red;
+  margin-left: 20px;
+  font-size: 14px;
+}

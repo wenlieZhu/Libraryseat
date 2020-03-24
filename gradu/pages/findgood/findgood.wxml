@@ -1,0 +1,30 @@
+<view class='liuyan'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/shiwuzhaoling.png' style='width:300rpx' mode='widthFix'></image>
+</view>
+<form bindsubmit="sub_good">
+<i-panel title="请填写物品名称(10个字以内)">
+    <i-input name="gname" type="text" mode="wrapped" placeholder="物品名称" maxlength="20" bind:blur="gname_null" />
+<view class='good_warn'>{{gname_cue}}</view>
+</i-panel>
+<i-panel title="具体描述(为了提高找回率，请写明时间、地点)">
+<i-input type="textarea" name="gdetail" mode="wrapped" placeholder="具体描述" maxlength="200" /></i-panel>
+<i-panel title="联系方式">
+<i-input type="text" name="gphone" mode="wrapped" placeholder="请填写联系电话" maxlength="20" bind:blur="gphone_null" />
+<view class='good_warn'>{{gphone_cue}}</view>
+
+</i-panel>
+
+<button form-type="submit"><i-button type="success" shape="circle" size="large">发起找回</i-button></button>
+</form>
+<i-toast id="toast" />
+
+ <block wx:for="{{goodlist}}" wx:for-item="item" wx:key="goodlist">
+
+<i-card full title="物品名：{{item.gname}}" extra="{{item.gtime.year+1900}}-{{1+item.gtime.month}}-{{item.gtime.date}} {{item.gtime.hours}}:{{item.gtime.minutes}}" i-class="card-demo">
+    <view slot="content">具体描述：{{item.gdetail}}</view>
+    <view slot="footer">联系方式：{{item.gphone}}</view>
+</i-card>
+<view style='padding:20px'></view>
+
+</block>
+<i-load-more  tip="{{loadmsg}}" loading="{{loadtype}}" />

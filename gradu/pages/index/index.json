@@ -1,0 +1,12 @@
+{
+   "usingComponents": {
+    "i-button": "/dist/button/index",
+    "i-card": "/dist/card/index",
+    "i-grid": "/dist/grid/index",
+    "i-grid-label": "/dist/grid-label/index",
+    "i-grid-item": "/dist/grid-item/index",
+    "i-toast": "/dist/toast/index",
+    "i-load-more": "/dist/load-more/index"
+   },
+   "enablePullDownRefresh": true
+}

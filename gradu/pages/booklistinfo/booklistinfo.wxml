@@ -1,0 +1,31 @@
+<!--pages/booklistinfo/booklistinfo.wxml-->
+
+<!-- <view>{{uuid}}</view> -->
+<i-panel class="cell-panel-demo" title="订单编号【{{uuid}}】详细信息如下">
+    <i-cell-group>
+        <i-cell title="预约号" value="{{blist.bid}}"></i-cell>
+        <block wx:if="{{blist.btid==6001}}">
+        <i-cell title="订单状态" value="待使用"></i-cell>
+        </block>
+        <block wx:if="{{blist.btid==6002}}">
+        <i-cell title="订单状态" value="已完成"></i-cell>
+        </block>
+        <block wx:if="{{blist.btid==6003}}">
+        <i-cell title="订单状态" value="已取消"></i-cell>
+        </block>
+        <block wx:if="{{blist.btid==6004}}">
+        <i-cell title="订单状态" value="失约"></i-cell>
+        </block>
+        <i-cell title="预约时间" value="{{blist.bdate}}"></i-cell>
+        <i-cell title="预约时段" value="{{blist.btime}}"></i-cell>
+        <i-cell title="场室名" value="{{plist.pname}}"></i-cell>
+        <i-cell title="座位名" value="{{slist.sname}}"></i-cell>
+        <i-cell title="靠窗情况" value="{{theswindow}}"></i-cell>
+        <i-cell title="插座情况" value="{{thespower}}"></i-cell>
+        <i-cell title="其它需求" value="{{blist.bremark}}"></i-cell>
+        
+    </i-cell-group>
+</i-panel>
+<block wx:if="{{blist.btid==6001}}">
+<i-button type="info" shape="circle" size="large" bindtap='can_book'>取消该订单</i-button>
+</block>

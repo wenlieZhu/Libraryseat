@@ -1,0 +1,27 @@
+<!--pages/booklist/booklist.wxml-->
+
+<i-button bind:click="mov_index" type="info" shape="circle" size="large">返回首页</i-button>
+
+<block wx:for="{{ublist}}" wx:for-item="item" wx:key="ublist">
+
+<view style="margin: 16px">订单编号【{{item.bid}}】</view>
+<i-card  i-class="card-list" full title="{{item.bdate}}" extra="查看详情" thumb="/images/find_o.png" data-bid="{{item.bid}}" data-pid="{{item.pid}}" data-sid="{{item.sid}}" bindtap='mov_booklistinfo'>
+  <block wx:if="{{item.btid==6001}}">
+    <view slot="content">当前状态：待使用</view>
+  </block>
+  <block wx:elif="{{item.btid==6002}}">
+    <view slot="content">当前状态：已完成</view>
+  </block>
+  <block wx:elif="{{item.btid==6003}}">
+    <view slot="content">当前状态：已取消</view>
+  </block>
+  <block wx:elif="{{item.btid==6004}}">
+    <view slot="content">当前状态：失约</view>
+  </block>
+    <view slot="footer"></view>
+</i-card>
+
+</block>
+
+
+<i-button bind:click="mov_index" type="info" shape="circle" size="large">返回首页</i-button>

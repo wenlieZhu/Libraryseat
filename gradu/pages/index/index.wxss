@@ -1,0 +1,22 @@
+/**index.wxss**/
+.da_top{
+  font-size:large;
+  text-align: center;
+  color: white;
+ background-color:#5cadff;
+}
+.da_next{
+  font-size: initial;
+  text-align: center;
+}
+.time_style{
+  font-size:large;
+  text-align: center;
+  margin: 15px;
+}
+.card_style{
+  background-color: rgb(240, 240, 240);
+}
+swiper{
+  height: 200px;
+}

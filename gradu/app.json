@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/find/find",
+    "pages/person/person",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/booking/booking",
+    "pages/bookok/bookok",
+    "pages/perset/perset",
+    "pages/booklist/booklist",
+    "pages/sysset/sysset",
+    "pages/booklistinfo/booklistinfo",
+    "pages/article/article",
+    "pages/message/message",
+    "pages/findgood/findgood"
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#5cadff",
+    "navigationBarTitleText": "图书馆座位预约平台",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#f00",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/index.png",
+        "selectedIconPath": "/images/index_o.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "/images/find.png",
+        "selectedIconPath": "/images/find_o.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人",
+        "iconPath": "/images/per.png",
+        "selectedIconPath": "/images/per_o.png"
+      }
+    ]
+  }
+}

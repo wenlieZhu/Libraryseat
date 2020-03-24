@@ -1,0 +1,46 @@
+/* pages/booking/booking.wxss */
+.i-steps-demo{
+    margin:20px;
+}
+.one-tag{
+    font-size:14px;
+    margin:30px 5px 20px 0;
+}
+button::after{
+  border:0;
+}
+button{
+  color: white;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.picker_c{
+  font-size:16px;
+  margin-left:16px;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #4c4e52;
+  font-weight:bold;
+  border:dotted;
+  border-color:#4c4e52;
+  border-width:thin;
+
+  /* background-color:#E6E6FA */
+}
+.picker_cc{
+  font-size:16px;
+  margin-left:16px;
+  margin-top: 10px;
+  color: #4c4e52;
+  font-weight:bold;
+  /* background-color:#E6E6FA */
+}
+.book_warn{
+  color: red;
+  margin-left: 20px;
+  font-size: 14px;
+}

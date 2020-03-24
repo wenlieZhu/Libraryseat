@@ -1,0 +1,17 @@
+/* pages/perset/perset.wxss */
+button::after{
+  border:0;
+}
+button{
+  color: white;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+.perset_title{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}

@@ -1,0 +1,4 @@
+/* pages/booklist/booklist.wxss */
+.card-list{
+  background-color: azure;
+}

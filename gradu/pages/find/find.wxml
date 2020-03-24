@@ -1,0 +1,114 @@
+<!--pages/find/find.wxml-->
+<i-notice-bar icon="systemprompt" loop closable>
+    营造一个良好的图书馆上座秩序，预约上座，失约无座，拒绝占座！
+</i-notice-bar>
+
+<i-grid>
+  <i-grid-item bindtap="find_goin">
+      <i-grid-icon>
+          <i-icon size="24" type="barrage" />
+      </i-grid-icon>
+      <i-grid-label>走进本馆</i-grid-label>
+  </i-grid-item>
+  <i-grid-item bindtap="find_book">
+      <i-grid-icon>
+          <i-icon size="24" type="createtask" />
+      </i-grid-icon>
+      <i-grid-label>预约制度</i-grid-label>
+  </i-grid-item>
+  <i-grid-item bindtap='find_safe'>
+      <i-grid-icon>
+          <i-icon size="24" type="remind" />
+      </i-grid-icon>
+      <i-grid-label>通知公告</i-grid-label>
+  </i-grid-item>
+</i-grid>
+
+<i-grid>
+  <i-grid-item bindtap='find_miss'>
+      <i-grid-icon>
+          <i-icon size="24" type="prompt" />
+      </i-grid-icon>
+      <i-grid-label>失约公示</i-grid-label>
+  </i-grid-item>
+  <i-grid-item bindtap='mov_findgood'>
+      <i-grid-icon>
+          <i-icon size="24" type="feedback" />
+      </i-grid-icon>
+      <i-grid-label>失物招领</i-grid-label>
+  </i-grid-item>
+  <i-grid-item bindtap='find_new'>
+      <i-grid-icon>
+          <i-icon size="24" type="collection" />
+      </i-grid-icon>
+      <i-grid-label>新书推荐</i-grid-label>
+  </i-grid-item>
+</i-grid>
+
+<i-grid>
+  <i-grid-item bindtap='find_service'>
+      <i-grid-icon>
+          <i-icon size="24" type="browse" />
+      </i-grid-icon>
+      <i-grid-label>服务指南</i-grid-label>
+  </i-grid-item>
+
+  <i-grid-item bindtap='find_eco'>
+      <i-grid-icon>
+          <i-icon size="24" type="customerservice" />
+      </i-grid-icon>
+      <i-grid-label>电子资源</i-grid-label>
+  </i-grid-item>
+
+
+
+  <i-grid-item bindtap='find_wifi'>
+      <i-grid-icon>
+          <i-icon size="24" type="mobilephone" />
+      </i-grid-icon>
+      <i-grid-label>馆内Wi-Fi</i-grid-label>
+  </i-grid-item>
+</i-grid>
+
+<i-grid>
+  <i-grid-item bindtap='find_ganhuo'>
+      <i-grid-icon>
+          <i-icon size="24" type="search" />
+      </i-grid-icon>
+      <i-grid-label>学习干货</i-grid-label>
+  </i-grid-item>
+  <i-grid-item bindtap="mov_about">
+      <i-grid-icon>
+          <i-icon size="24" type="time" />
+      </i-grid-icon>
+      <i-grid-label>关于我们</i-grid-label>
+  </i-grid-item>
+  <i-grid-item bindtap="find_more">
+      <i-grid-icon>
+          <i-icon size="24" type="more" />
+      </i-grid-icon>
+      <i-grid-label>更多资讯</i-grid-label>
+  </i-grid-item>
+</i-grid>
+
+<view class='liuyan'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/liuyan.png' style='width:200rpx' mode='widthFix'></image>
+
+</view>
+<view class='liuyan'>
+<i-button inline type="success" bindtap='mov_message'>我要留言</i-button>
+<button open-type="contact"><i-button inline type="primary">联系客服</i-button></button>
+</view>
+
+<block wx:for="{{msglist}}" wx:for-item="item" wx:key="msglist">
+
+<i-card full title="主题：{{item.mtitle}}" extra="{{item.mtime.year+1900}}-{{1+item.mtime.month}}-{{item.mtime.date}} {{item.mtime.hours}}:{{item.mtime.minutes<10?'0'+item.mtime.minutes:item.mtime.minutes}}"  i-class="card-demo">
+    <view slot="content">内容：{{item.mdetail}}</view>
+</i-card>
+<view style='padding:20px'></view>
+
+</block>
+<i-load-more  tip="{{loadmsg}}" loading="{{loadtype}}" />
+
+
+

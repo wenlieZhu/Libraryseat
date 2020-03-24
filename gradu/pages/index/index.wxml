@@ -1,0 +1,56 @@
+<!--index.wxml-->
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+  <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+    <swiper-item>
+      <navigator url="{{item.link}}" hover-class="navigator-hover">
+        <image src="{{item.url}}" style="width: 100%; "  mode='scaleToFill' />
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+<i-button bind:click="mov_booking" type="success">开始预约</i-button>
+
+      <view class='time_style'>北京时间 Beijing time</view>
+      <view class='time_style'>{{time}}</view>
+     
+<i-grid i-class='da_top'>
+  <i-grid-item>场室</i-grid-item>
+  <i-grid-item>总数</i-grid-item>
+  <i-grid-item>余量</i-grid-item>
+</i-grid>
+<i-grid i-class='da_next'>
+  <i-grid-item>读者自修室</i-grid-item>
+  <i-grid-item>192</i-grid-item>
+  <i-grid-item>{{zixiu}}</i-grid-item>
+</i-grid>
+<i-grid i-class='da_next'>
+  <i-grid-item>读者阅览室</i-grid-item>
+  <i-grid-item>192</i-grid-item>
+  <i-grid-item>{{yuelan}}</i-grid-item>
+</i-grid>
+<i-grid i-class='da_next'>
+  <i-grid-item>第二阅览室</i-grid-item>
+  <i-grid-item>212</i-grid-item>
+  <i-grid-item>{{dier}}</i-grid-item>
+</i-grid>
+
+<view style="margin: 16px"></view>
+<i-card title="图书馆座位预约管理制度" thumb="https://www.zhuwenlie.cn/Libraryseat/images/libp1.jpg" i-class='card_style' bindtap='mov_rule'>
+    <view slot="content">传递信息，服务读者，因读者之需而变</view>
+    <view slot="footer">发布时间：2019-4-26 10:00</view>
+</i-card>
+<view style="margin: 16px"></view>
+<i-card title="2019 Emerald平台检索活动" thumb="https://www.zhuwenlie.cn/Libraryseat/images/libp2.jpg" i-class='card_style' bindtap='mov_activity'>
+    <view slot="content">文海无涯，吾将上下求索</view>
+    <view slot="footer">发布时间：2019-4-25 10:30</view>
+</i-card>
+<view style="margin: 16px"></view>
+<i-card title="维普中文期刊服务平台开通试用" thumb="https://www.zhuwenlie.cn/Libraryseat/images/libp3.jpg" i-class='card_style' bindtap='mov_vpu'>
+    <view slot="content">高效的文献检索平台</view>
+    <view slot="footer">发布时间：2019-4-24 10:20</view>
+</i-card>
+<view style="padding: 16px"></view>
+<i-toast id="toast" />
+<i-load-more  tip="{{loadmsg}}" loading="{{loadtype}}" />
+

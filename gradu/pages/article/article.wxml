@@ -1,0 +1,126 @@
+<!-- <web-view src='https://mp.weixin.qq.com/s/lW47fQokiGwZrQd5i7GUYg'></web-view> -->
+<view class='all_page'>
+<block wx:if="{{arid==1}}">1111111</block>
+
+<!-- test -->
+<block wx:elif="{{arid=='find_xxx'}}">1111111</block>
+
+<!-- 走进本馆 -->
+<block wx:elif="{{arid=='find_goin'}}">
+<web-view src='https://mp.weixin.qq.com/s/Q0a7vY5N4CE-2sMIKUCFPQ'></web-view>
+</block>
+
+<!-- 失约公示 -->
+<block wx:elif="{{arid=='find_miss'}}">
+<web-view src='https://mp.weixin.qq.com/s/DbRaAZrjcACG4S0XdnoWcw'></web-view>
+</block>
+
+<!-- 通知公告 -->
+<block wx:elif="{{arid=='find_safe'}}">
+<web-view src='https://mp.weixin.qq.com/s/F3mTE_QaR02vdR4KkIS-Xg'></web-view>
+</block>
+
+<!-- 新书推荐 -->
+<block wx:elif="{{arid=='find_new'}}">
+<web-view src='https://mp.weixin.qq.com/s/4q-VsfEMVZO5eGgaOUkd4A'></web-view>
+</block>
+
+<!-- 服务指南 -->
+<block wx:elif="{{arid=='find_service'}}">
+<web-view src='https://mp.weixin.qq.com/s/4BKO0DmjXHW5f3cOIa964Q'></web-view>
+</block>
+
+<!-- 电子资源 -->
+<block wx:elif="{{arid=='find_eco'}}">
+<web-view src='https://mp.weixin.qq.com/s/pKWkYDeYmUXx-U6_gq4miw'></web-view>
+</block>
+
+<!-- 学习干货 -->
+<block wx:elif="{{arid=='find_ganhuo'}}">
+<web-view src='https://mp.weixin.qq.com/s/kndLy092fDITgqIMDLcCkQ'></web-view>
+</block>
+
+<!-- 更多资讯 -->
+<block wx:elif="{{arid=='find_more'}}">
+<web-view src='https://mp.weixin.qq.com/s/sKyStxSU-zGWjgkdp044Dw'></web-view>
+</block>
+
+<!-- 活动 -->
+<block wx:elif="{{arid=='ins_activity'}}">
+<web-view src='https://mp.weixin.qq.com/s/KNcvUXcC927pSq549Xawhw'></web-view>
+</block>
+
+<!-- 维普 -->
+<block wx:elif="{{arid=='ins_vpu'}}">
+<web-view src='https://mp.weixin.qq.com/s/HgyY7Y0rlkGi2Vme5AK6jA'></web-view>
+</block>
+
+<!-- 预约制度 -->
+<block wx:elif="{{arid=='find_book'}}">
+<web-view src='https://mp.weixin.qq.com/s/dX9trLFOyDgPt2rTShCA-Q'></web-view>
+</block>
+
+<!-- 馆内wifi -->
+<block wx:elif="{{arid=='find_wifi'}}">
+<view class='img_center'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/minilogo.png' style='width:200rpx' mode='widthFix'></image></view>
+<view class='img_center'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/yuyuepingtai.png' style='width:700rpx' mode='widthFix'></image></view>
+
+<text class='wifi_font' decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您好，登陆wifi步骤如下：</text>
+<text class='wifi_font' decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户名：学号/工号</text>
+<text class='wifi_font' decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：身份证后六位数</text>
+</block>
+
+<!-- 关于我们 -->
+<block wx:elif="{{arid=='about_us'}}">
+<view style='padding:20px'></view>
+<view class='img_center'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/sclogo.png' style='width:700rpx' mode='widthFix'></image></view>
+<view class='img_center'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/minilogo.png' style='width:200rpx' mode='widthFix'></image></view>
+<view class='img_center'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/yuyuepingtai.png' style='width:700rpx' mode='widthFix'></image></view>
+<view class='font_center'>V 1.1.0</view>
+<view style='padding:30px'></view>
+<view class='font_center'>《平台服务协议》</view>
+<view style='padding:5px'></view>
+<view class='font_center'>《隐私服务协议》</view>
+<view style='padding:10px'></view>
+<view class='font_center'>Copyright © 2018-2019 Zhuwenlie.</view>
+<view class='font_center'>All Rights Reserved.</view>
+</block>
+
+<!-- 平台服务协议  -->
+<block wx:elif="{{arid=='platform'}}">platform</block>
+
+<!-- 隐私服务协议 -->
+<block wx:elif="{{arid=='hide'}}">hide</block>
+
+<!-- 备案信息 -->
+<block wx:elif="{{arid=='beian'}}">
+<text class='beian_font' decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了保护网络信息安全，保障公民、法人和其他组织的合法权益，维护国家安全和社会公共利益， 公安机关将备案网站的基本情况公布如下： </text>
+<view style='padding:15px'></view>
+<i-row i-class="demo-row light">
+    <i-col span="12" i-class="demo-col">开办者名称</i-col>
+    <i-col span="12" i-class="demo-col light">朱文列</i-col>
+</i-row>
+<i-row i-class="demo-row light">
+    <i-col span="12" i-class="demo-col">网站域名</i-col>
+    <i-col span="12" i-class="demo-col light">zhuwenlie.cn</i-col>
+</i-row>
+<i-row i-class="demo-row light">
+    <i-col span="12" i-class="demo-col">备案地</i-col>
+    <i-col span="12" i-class="demo-col light">广州市白云区网安大队</i-col>
+</i-row>
+<i-row i-class="demo-row light">
+    <i-col span="12" i-class="demo-col">联网备案时间</i-col>
+    <i-col span="12" i-class="demo-col light">2019-03-13</i-col>
+</i-row>
+<view style='padding:30px'></view>
+<view class='font_center'>粤ICP备19019785号</view>
+<view style='padding:10px'></view>
+<view class='font_center'><image src='https://www.zhuwenlie.cn/Libraryseat/images/gonganbei.png' style='width:50rpx' mode='widthFix'></image>粤公网安备 44011102002493号</view>
+</block>
+
+</view>

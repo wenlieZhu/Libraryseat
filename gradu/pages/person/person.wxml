@@ -1,0 +1,52 @@
+<!--pages/person/person.wxml-->
+<block wx:if="{{ulist.length>0}}">
+<view wx:for="{{ulist}}" wx:for-item="item" wx:key="ulist">
+<i-card full title="当前用户:{{item.uname}}" thumb="https://www.zhuwenlie.cn/Libraryseat/images/minilogo.png" i-class="dingbu">
+    <view slot="content">个性签名：{{item.uremark}}</view>
+</i-card>
+</view>
+
+<i-panel class="cell-panel-demo">
+    <i-cell title="订单查询" is-link url="/pages/booklist/booklist">
+        <i-icon type="browse_fill" slot="icon" />
+    </i-cell>
+</i-panel>
+
+<i-panel class="cell-panel-demo">
+    <i-cell title="开始预约" is-link url="/pages/booking/booking">
+        <i-icon type="collection" slot="icon" />
+    </i-cell>
+</i-panel>
+
+<i-panel class="cell-panel-demo">
+    <i-cell title="个人资料" is-link url="/pages/perset/perset">
+        <i-icon type="mine" slot="icon" />
+    </i-cell>
+</i-panel>
+
+<i-panel class="cell-panel-demo">
+    <i-cell title="设置" is-link url="/pages/sysset/sysset">
+        <i-icon type="setup" slot="icon" />
+    </i-cell>
+</i-panel>
+
+</block>
+
+<block wx:else>
+      <i-card full title="用户未登录，登录后获取更多功能" thumb="https://www.zhuwenlie.cn/Libraryseat/images/signin.png"  i-class="dingbu">
+</i-card>
+<view class='img_center'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/sclogo.png' style='width:700rpx' mode='widthFix'></image></view>
+
+<view class='img_center'>
+<image src='https://www.zhuwenlie.cn/Libraryseat/images/yuyuepingtai.png' style='width:700rpx' mode='widthFix'></image></view>
+
+<view class='ziti'>已有账号</view>
+<i-button shape="circle" type="success" bindtap='mov_login'>登录</i-button>
+<view class='ziti'>没有账号</view>
+<i-button shape="circle" type="primary" bindtap='mov_register'>新用户注册</i-button>
+    <view class='img_center'>
+    <image src='https://www.zhuwenlie.cn/Libraryseat/images/zhanzuo.png' style='width:400rpx' mode='widthFix'></image></view>
+    </block>
+
+
